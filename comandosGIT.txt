@@ -26,6 +26,9 @@ Repaso de comndos de git:
 ¿Como ligar un repositorio?
 	//Antes tienes que ser creado en github.com (sin inicializar)
 	+git add remote origin "URL"
+		o
+	+git remote add -f -t master -m master origin "Url_webrepository"
+
 
 ¿Como revisar que ha habido cambios locales?
 	+git status

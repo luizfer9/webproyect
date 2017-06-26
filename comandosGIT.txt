@@ -74,3 +74,6 @@ Repaso de comndos de git:
 	+git add -A
 	+git commit -m "elimnar archivos(comentario)"
 	+git push origin master
+
+-Creacion de index.lock
+	+rm -f ./.git/index.lock

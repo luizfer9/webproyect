@@ -1,14 +1,14 @@
 Repaso de comndos de git:
 
--¿Como hacer un commit?
+-Â¿Como hacer un commit?
 	+ git add -A
 	+ git commit -m "mensaje"
 
--¿Commit al servidor?
+-Â¿Commit al servidor?
 	+ git add -A
 	+ git commit -m "mensaje"
 
--¿Que hacer si no dej actualizar el repositorio?
+-Â¿Que hacer si no dej actualizar el repositorio?
  y hubo cambios.
 	//Antes realizar commit local
 	+ git fetch (se descargan cambios del repo)
@@ -16,56 +16,56 @@ Repaso de comndos de git:
 	//subimos de nuevo:
 	+ git push origin master
 
--¿Como actualizamos nuestro reositorio local sin haber hecho cambios?
+-Â¿Como actualizamos nuestro reositorio local sin haber hecho cambios?
 	+ git pull origin master
 
--¿Como clonar un repositorio?
+-Â¿Como clonar un repositorio?
 	//Crear un repositorio antes en github.com (inicializado)
 	+ git clone "URL"
 
--¿Como ligar un repositorio?
+-Â¿Como ligar un repositorio?
 	//Antes tienes que ser creado en github.com (sin inicializar)
 	+git add remote origin "URL"
 		o
 	+git remote add -f -t master -m master origin "Url_webrepository"
 
 
--¿Como revisar que ha habido cambios locales?
+-Â¿Como revisar que ha habido cambios locales?
 	+git status
 
--¿Como revisr todo lo commit realizados?
+-Â¿Como revisr todo lo commit realizados?
 	+git log
 	+git log> log.text (Exporta a txt para poder copiarlos)
 
--¿Como mover nos a un commit especifico?
+-Â¿Como mover nos a un commit especifico?
 	+git chekout ID_DE_COMMIT
 
--¿Como inicilizar un proyecto en git?
+-Â¿Como inicilizar un proyecto en git?
 	+git init (Para repos locales, no es necesario si clonamos)
 
--¿Como regresar al ultimo commit?
+-Â¿Como regresar al ultimo commit?
 	+git chekout master
 
--¿Como crear una rama?
+-Â¿Como crear una rama?
 	+git branch Nombre_Rama
 	+git branch (Enlista todas las ramas que existen)
 
--¿Como cambiamos de rama?
+-Â¿Como cambiamos de rama?
 	+git chekout Nombre_Rama
 
--¿Subir cambios a una rama especifica?
+-Â¿Subir cambios a una rama especifica?
 	//posicionarse a la rama a la que se le quiere aderir cambios
 	+git add -A
 	+git commit -m	"Nombrecommit"
 	+git pushi origin "Rama"
 
--¿Como mover todos los cambios de las ramas, a la rama master?
+-Â¿Como mover todos los cambios de las ramas, a la rama master?
 	//posicionarse a la rama master
 	+git chekout master
 	+git merge "Rama1"
 	+git merge "Rama2"
 
--¿que pasa si al hcer merge hay conflictos? ( <<<=== HEAD )
+-Â¿que pasa si al hcer merge hay conflictos? ( <<<=== HEAD )
 	//Borrar los Head y volver a hacer commit
 
 -Eliminar archivos y carpetas del repositorio
@@ -77,3 +77,5 @@ Repaso de comndos de git:
 
 -Creacion de index.lock
 	+rm -f ./.git/index.lock
+-Remover remote asociado al repositorio local
+	+git remote rm "name of branch"

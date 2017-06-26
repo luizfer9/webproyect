@@ -16,54 +16,61 @@ Repaso de comndos de git:
 	//subimos de nuevo:
 	+ git push origin master
 
-¿Como actualizamos nuestro reositorio local sin haber hecho cambios?
+-¿Como actualizamos nuestro reositorio local sin haber hecho cambios?
 	+ git pull origin master
 
-¿Como clonar un repositorio?
+-¿Como clonar un repositorio?
 	//Crear un repositorio antes en github.com (inicializado)
 	+ git clone "URL"
 
-¿Como ligar un repositorio?
+-¿Como ligar un repositorio?
 	//Antes tienes que ser creado en github.com (sin inicializar)
 	+git add remote origin "URL"
 		o
 	+git remote add -f -t master -m master origin "Url_webrepository"
 
 
-¿Como revisar que ha habido cambios locales?
+-¿Como revisar que ha habido cambios locales?
 	+git status
 
-¿Como revisr todo lo commit realizados?
+-¿Como revisr todo lo commit realizados?
 	+git log
 	+git log> log.text (Exporta a txt para poder copiarlos)
 
-¿Como mover nos a un commit especifico?
+-¿Como mover nos a un commit especifico?
 	+git chekout ID_DE_COMMIT
 
-¿Como inicilizar un proyecto en git?
+-¿Como inicilizar un proyecto en git?
 	+git init (Para repos locales, no es necesario si clonamos)
 
-¿Como regresar al ultimo commit?
+-¿Como regresar al ultimo commit?
 	+git chekout master
 
-¿Como crear una rama?
+-¿Como crear una rama?
 	+git branch Nombre_Rama
 	+git branch (Enlista todas las ramas que existen)
 
-¿Como cambiamos de rama?
+-¿Como cambiamos de rama?
 	+git chekout Nombre_Rama
 
-¿Subir cambios a una rama especifica?
+-¿Subir cambios a una rama especifica?
 	//posicionarse a la rama a la que se le quiere aderir cambios
 	+git add -A
 	+git commit -m	"Nombrecommit"
 	+git pushi origin "Rama"
 
-¿Como mover todos los cambios de las ramas, a la rama master?
+-¿Como mover todos los cambios de las ramas, a la rama master?
 	//posicionarse a la rama master
 	+git chekout master
 	+git merge "Rama1"
 	+git merge "Rama2"
 
-¿que pasa si al hcer merge hay conflictos? ( <<<=== HEAD )
+-¿que pasa si al hcer merge hay conflictos? ( <<<=== HEAD )
 	//Borrar los Head y volver a hacer commit
+
+-Eliminar archivos y carpetas del repositorio
+	//eliminar primero los archivos del repositorio local
+	+git rm -r nombrearchivo.extension o git rm -rf nombre carpetaAelimnar
+	+git add -A
+	+git commit -m "elimnar archivos(comentario)"
+	+git push origin master

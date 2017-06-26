@@ -25,12 +25,12 @@ class gruposController extends Controller
     	$grupo->materia_id=$datos->input('materia');
     	$grupo->save();
 
-    	return redirect('/');
+    	return redirect('consultarGrupos');
     }
     public function consultar(){
     	$grupos=DB::table('grupos')
     	->join('maestros','grupos.maestro_id','=','maestros.id')
-    	->join('materias','maestros.materia_id','=','materias.id')
+    	->join('materias','grupos.materia_id','=','materias.id')
      	->select('grupos.*','maestros.nombre AS maestro','materias.nombre AS materia')
     	->paginate(5);
 
@@ -45,8 +45,8 @@ class gruposController extends Controller
       $maestros=Maestros::all();
       $materias=Materias::all();
       $grupos=DB::table('grupos')
-         ->where('grupos.id', '=', $id)
-         ->join('maestros','grupos.maestro_id','=','maestros.id')
+       ->where('grupos.id', '=', $id)
+       ->join('maestros','grupos.maestro_id','=','maestros.id')
     	 ->join('materias','maestros.materia_id','=','materias.id')
      	 ->select('grupos.*','maestros.nombre AS maestro','materias.nombre AS materia')
          ->first();

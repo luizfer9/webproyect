@@ -13,6 +13,7 @@
 	<div class="form-group">
 		<label for="maestro">Maestro:</label>
 			<select name="maestro" class="form-control">
+				<option value="{{$grupos->maestro_id}}">{{$grupos->maestro}}</option>
 				@foreach($maestros as $c)
 					<option value="{{$c->id}}">{{$c->nombre}}</option>
 				@endforeach
@@ -21,6 +22,7 @@
 	<div class="form-group">
 		<label for="materia">Materia:</label>
 			<select name="materia" class="form-control">
+				<option value="{{$grupos->materia_id}}">{{$grupos->materia}}</option>
 				@foreach($materias as $c)
 					<option value="{{$c->id}}">{{$c->nombre}}</option>
 				@endforeach

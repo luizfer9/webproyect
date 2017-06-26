@@ -23,11 +23,10 @@ class alumnosController extends Controller
    		$alumno->carrera_id=$datos->input('carrera');
    		$alumno->save();
 
-   		return redirect('/consutlarAlumnos');
+   		return redirect('/consultarAlumnos');
    }
 
    public function consultar(){
-   		//$alumnos=Alumnos::paginate(5);
       $alumnos=DB::table('alumnos')
          ->join('carreras', 'alumnos.carrera_id', '=', 'carreras.id')
          ->select('alumnos.*', 'carreras.nombre AS nom_carrera')

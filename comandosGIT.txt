@@ -1,5 +1,6 @@
 Repaso de comndos de git:
-
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
 -¿Como hacer un commit?
 	+ git add -A
 	+ git commit -m "mensaje"

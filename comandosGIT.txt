@@ -10,6 +10,8 @@ $ git config --global user.email johndoe@example.com
 	+ git add -A
 	+ git commit -m "mensaje"
 
+-Revisar los cambios hechos en el repositorio local
+
 -¿Que hacer si no dej actualizar el repositorio?
  y hubo cambios.
 	//Antes realizar commit local

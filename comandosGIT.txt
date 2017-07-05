@@ -11,6 +11,7 @@ $ git config --global user.email johndoe@example.com
 	+ git commit -m "mensaje"
 
 -Revisar los cambios hechos en el repositorio local
+	+ git status
 
 -¿Que hacer si no dej actualizar el repositorio?
  y hubo cambios.
@@ -81,5 +82,6 @@ $ git config --global user.email johndoe@example.com
 
 -Creacion de index.lock
 	+rm -f ./.git/index.lock
+	
 -Remover remote asociado al repositorio local
 	+git remote rm "name of branch"

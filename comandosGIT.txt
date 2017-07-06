@@ -18,6 +18,7 @@ $ git config --global user.email johndoe@example.com
 	//Antes realizar commit local
 	+ git fetch (se descargan cambios del repo)
 	+ git merge origin master	(Fusiona cambios del repo con los locales)
+	+ git commit -am "mensaje"	(avisa que estan solucionados los problemas)
 	//subimos de nuevo:
 	+ git push origin master
 
